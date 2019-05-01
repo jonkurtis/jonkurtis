@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -19,24 +20,27 @@ export default class IndexPage extends React.Component {
               .map(({ node: post }) => (
                 <div
                   className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
+                  style={{ maxWidth: '400px', background: 'white',     boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px`, borderRadius: '5px',}}
                   key={post.id}
                 >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+                <PreviewCompatibleImage imageInfo={post.frontmatter.image} />
+                  <div
+                    style={{padding: '2em 4em',}}
+                  >
+                    <p>
+                      <Link className="has-text-primary" to={post.fields.slug}>
+                        {post.frontmatter.title}
+                      </Link>
+                      <span> &bull; </span>
+                      <small>{post.frontmatter.date}</small>
+                    </p>
+                    <p>
+                      <br />
+                      <Link className="button is-small" to={post.fields.slug}>
+                        Keep Reading →
+                      </Link>
+                    </p>
+                  </div>
                 </div>
               ))}
           </div>
@@ -62,7 +66,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
           fields {
             slug
@@ -71,6 +74,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
