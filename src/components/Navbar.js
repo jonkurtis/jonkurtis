@@ -1,68 +1,65 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
 
-const Navbar = class extends React.Component {
-
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-   if ($navbarBurgers.length > 0) {
- 
-     // Add a click event on each of them
-     $navbarBurgers.forEach( el => {
-       el.addEventListener('click', () => {
- 
-         // Get the target from the "data-target" attribute
-         const target = el.dataset.target;
-         const $target = document.getElementById(target);
- 
-         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-         el.classList.toggle('is-active');
-         $target.classList.toggle('is-active');
- 
-       });
-     });
-   }
- }
- 
- render() {
+const Navbar = () => {
    return (
-  
-  <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
-          <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+  <nav className="" role="navigation" aria-label="main-navigation"
+    style={{
+      backgroundColor: '#0e2439',
+    }}
+  >
+    <div className="container"
+      style={{
+        display: 'flex',
+        alignItems: 'center'
+      }}
+    >
+      <div className="navbar-brand"
+        style={{
+          flexGrow: '1',
+        }}
+      >
+        <Link to="/" className="navbar-item" title="Logo"
+          style={{
+            fontSize: '2rem',
+            textTransform: 'uppercase',
+            fontFamily: 'Monoton',
+            color: '#FF1177',
+            textShadow: `0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177`
+          }}
+        >
+          JonKurtis
         </Link>
-        {/* Hamburger menu */}
-        <div className="navbar-burger burger" data-target="navMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
-      <div id="navMenu" className="navbar-menu">
-      <div className="navbar-start has-text-centered">
+      <div id="navMenu" 
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+      <div className=" has-text-centered"
+      style={{
+        display: 'flex',
+        fontSize: '1.25rem',
+        textTransform: 'uppercase',
+      }}
+      >
         <Link className="navbar-item" to="/about">
           About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
         </Link>
         <Link className="navbar-item" to="/contact">
           Contact
         </Link>
-        <Link className="navbar-item" to="/contact/examples">
-          Form Examples
-        </Link>
       </div>
-      <div className="navbar-end has-text-centered">
+      <div className="navbar-end has-text-centered"
+      style={{
+        display: 'flex',
+      }}
+      >
         <a
           className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+          href="https://github.com/JonKurtis"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -75,6 +72,5 @@ const Navbar = class extends React.Component {
     </div>
   </nav>
   )}
-}
 
 export default Navbar
