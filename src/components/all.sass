@@ -49,8 +49,20 @@ $family-monospace: monospace
 
 @import "~bulma"
 
+
+@include until($tablet)
+  nav
+    flex-direction: column
+  .navbar-brand
+    justify-content: center
+  #navMenu
+    flex-direction: column
+  .nav-menu-links
+    order: 1
+
 a.navbar-item
   color: #b5b3b3
+  font-size: 1.2rem
 
   &:hover
     background: none
@@ -58,9 +70,18 @@ a.navbar-item
 
 .icon
   display: flex
+  margin: 0 0.2rem!important
 
 .github-icon
   fill: #b5b3b3
 
   &:hover
     fill: white
+
+a.neon-glow
+  color: #fff
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177
+
+  &:hover
+    text-shadow: none
+    color: #FF1177
