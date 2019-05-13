@@ -1,5 +1,5 @@
 import React from 'react'
-//import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Hero = () => {
@@ -12,13 +12,19 @@ const Hero = () => {
         }) {
           id
           frontmatter {
-            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 300, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
   `)
 
-  console.log(JSON.stringify(data))
+  console.log(JSON.stringify(data.markdownRemark.frontmatter.image))
 
   return (
     <div style={{
@@ -32,13 +38,17 @@ const Hero = () => {
       <div style={{
         padding: '2rem 4rem',
         maxWidth: '800px',
+        //display: 'flex',
+
       }}>
         <h1 style={{
           fontSize: '3rem'
         }}
         >Hi, I'm Jon Kurtis. I make lightning fast web experiences.</h1>
+        <div style={{maxWidth: '100px'}}>
+          <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} />
+        </div>
       </div>
-      {/* <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.} /> */}
     </div>
   )
 }
