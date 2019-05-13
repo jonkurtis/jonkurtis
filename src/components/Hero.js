@@ -1,6 +1,25 @@
 import React from 'react'
+//import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query HeroQuery {
+        markdownRemark(frontmatter: {
+          templateKey: {
+            eq: "about-page"
+          }
+        }) {
+          id
+          frontmatter {
+            title
+          }
+        }
+      }
+  `)
+
+  console.log(JSON.stringify(data))
+
   return (
     <div style={{
       background: '#2d3047',
@@ -19,6 +38,7 @@ const Hero = () => {
         }}
         >Hi, I'm Jon Kurtis. I make lightning fast web experiences.</h1>
       </div>
+      {/* <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.} /> */}
     </div>
   )
 }
