@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: About Me
+image: /img/jonkurtis.jpg
 ---
 ## Hi, I'm Jon Kurtis 👋
 
