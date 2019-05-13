@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Layout from '../../components/Layout'
+import PreviewCompatibleImage from '../../components/PreviewCompatibleImage'
 import { kebabCase } from 'lodash'
-import Hero from '../components/Hero'
 
-export default class IndexPage extends React.Component {
+export default class BlogPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
       <Layout>
-        <Hero />
         <section className="section">
           <div className="container">
             <div className="content">
-              <h2 className="has-text-weight-bold is-size-2">Blog Posts</h2>
+              <h1 className="has-text-weight-bold is-size-2">Blog Posts</h1>
             </div>
             {posts
               .map(({ node: post }) => (
@@ -68,7 +66,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -77,7 +75,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}

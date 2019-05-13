@@ -12,6 +12,9 @@ $body-color: #333
 
 $family-monospace: monospace
 
+nav 
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 6px 6px
+
 .navbar .navbar-menu
   box-shadow:none !important
 
@@ -49,6 +52,13 @@ $family-monospace: monospace
 
 @import "~bulma"
 
+body 
+  font-size: 20px
+
+@include from($tablet)
+  .container-content
+    max-width: 800px!important
+    width: 800px!important
 
 @include until($tablet)
   nav
@@ -61,12 +71,12 @@ $family-monospace: monospace
     order: 1
 
 a.navbar-item
-  color: #b5b3b3
+  color: white
   font-size: 1.2rem
 
   &:hover
     background: none
-    color: white
+    color: #b5b3b3
 
 .icon
   display: flex
