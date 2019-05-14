@@ -34,7 +34,7 @@ const Hero = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '2rem 2rem',
+      padding: '2rem 1rem',
       flexWrap: 'wrap'
     }}>
       <div style={{
@@ -44,15 +44,15 @@ const Hero = () => {
 
       }}>
         <h1 style={{
-          fontSize: '2.25rem'
+          fontSize: '2rem'
         }}
         >Hi, I'm Jon Kurtis. I make lightning fast web experiences.</h1>
       </div>
       <div style={{
-        width: '150px',
-        minWidth: '150px',
+        width: '175px',
+        minWidth: '175px',
         borderRadius: '50%',
-        margin: '2rem 2rem 0 2rem'
+        margin: '2rem 2rem 0 2rem',
         }}>
         <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} styles={{borderRadius: '50%'}}/>
       </div>
