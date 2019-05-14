@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '10px 10px 0 0', }
-  const { alt = '', childImageSharp, image } = imageInfo
+const PreviewCompatibleImage = (props) => {
+  //const imageStyle = { borderRadius: '10px 10px 0 0', }
+  const imageStyle = props.styles
+  const { alt = '', childImageSharp, image } = props.imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (

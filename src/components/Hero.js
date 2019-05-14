@@ -36,17 +36,19 @@ const Hero = () => {
       justifyContent: 'center',
     }}>
       <div style={{
-        padding: '2rem 4rem',
-        maxWidth: '800px',
+        //maxWidth: '800px',
         //display: 'flex',
 
       }}>
         <h1 style={{
-          fontSize: '3rem'
+          fontSize: '2rem'
         }}
         >Hi, I'm Jon Kurtis. I make lightning fast web experiences.</h1>
-        <div style={{maxWidth: '100px'}}>
-          <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} />
+        <div style={{
+          maxWidth: '150px',
+          borderRadius: '50%',
+          }}>
+          <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} styles={{borderRadius: '50%'}}/>
         </div>
       </div>
     </div>
