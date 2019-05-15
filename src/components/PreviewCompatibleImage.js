@@ -5,20 +5,21 @@ import Img from 'gatsby-image'
 const PreviewCompatibleImage = (props) => {
   //const imageStyle = { borderRadius: '10px 10px 0 0', }
   const imageStyle = props.styles
+  const classname = props.className
   const { alt = '', childImageSharp, image } = props.imageInfo
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} className={classname} />
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} className={classname} />
   }
 
   if (!!image && typeof image === 'string')
-    return <img style={imageStyle} src={image} alt={alt} />
+    return <img style={imageStyle} src={image} alt={alt} className={classname} />
 
   return null
 }

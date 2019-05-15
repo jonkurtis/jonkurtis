@@ -2,6 +2,7 @@ import React from 'react'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import { useStaticQuery, graphql } from 'gatsby'
 
+
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query HeroQuery {
@@ -27,15 +28,17 @@ const Hero = () => {
   console.log(JSON.stringify(data.markdownRemark.frontmatter.image))
 
   return (
-    <div style={{
+    <div className="hero-container" style={{
       background: '#2d3047',
+      backgroundImage: `
+      radial-gradient(ellipse at center 50%,#18334f 0,#18334f 30%,#0e2439 60%,#0e2439 100%)
+      `,
       minHeight: '50vh',
       color: 'white',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       padding: '2rem 1rem',
-      flexWrap: 'wrap'
     }}>
       <div style={{
         minWidth: '300px',
@@ -48,13 +51,10 @@ const Hero = () => {
         }}
         >Hi, I'm Jon Kurtis. I make lightning fast web experiences.</h1>
       </div>
-      <div style={{
-        width: '175px',
-        minWidth: '175px',
-        borderRadius: '50%',
+      <div className="hero-image-container" style={{
         margin: '2rem 2rem 0 2rem',
         }}>
-        <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} styles={{borderRadius: '50%'}}/>
+        <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} className="hero-image" />
       </div>
     </div>
   )

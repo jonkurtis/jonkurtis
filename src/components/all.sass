@@ -59,6 +59,9 @@ body
   .container-content
     max-width: 800px!important
     width: 800px!important
+  .hero-image-container
+    width: 225px
+    min-width: 225px
 
 @include until($tablet)
   nav
@@ -69,6 +72,15 @@ body
     flex-direction: column
   .nav-menu-links
     order: 1
+  .hero-container
+    flex-direction: column
+  .hero-image-container
+    background: rgb(0, 173, 237)
+    border-radius: 50%
+    width: 175px
+    min-width: 175px
+  .hero-image
+    border-radius: 50%
 
 a.navbar-item
   color: white
