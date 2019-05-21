@@ -4,10 +4,12 @@
 // Config vars
 // Kalidi logo brand color: #FD461E
 $primary-red: #FF1177
+$secondary-blue: rgb(0, 173, 237)
 $kaldi-red-invert: #fff
 
 $primary: $primary-red
 $primary-invert: $kaldi-red-invert
+$secondary: $secondary-blue
 $body-color: #333 
 
 $family-monospace: monospace
@@ -74,13 +76,20 @@ body
     order: 1
   .hero-container
     flex-direction: column
-  .hero-image-container
-    background: rgb(0, 173, 237)
-    border-radius: 50%
-    width: 175px
-    min-width: 175px
-  .hero-image
-    border-radius: 50%
+ 
+.hero-image-container
+  border-radius: 50%
+  width: 175px
+  min-width: 175px
+  border: 1px solid white
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $secondary, 0 0 35px $secondary, 0 0 40px $secondary, 0 0 50px $secondary, 0 0 75px $secondary
+  &:hover
+    box-shadow: none
+
+.hero-image
+  border-radius: 50%
+  background: $secondary
+  margin: .25rem
 
 a.navbar-item
   color: white

@@ -54,7 +54,9 @@ const Hero = () => {
       <div className="hero-image-container" style={{
         margin: '2rem 2rem 0 2rem',
         }}>
-        <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} className="hero-image" />
+        <Link to="/about">
+          <PreviewCompatibleImage imageInfo={data.markdownRemark.frontmatter.image} className="hero-image" />
+        </Link>
       </div>
     </div>
   )
