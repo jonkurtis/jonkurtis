@@ -4,12 +4,16 @@
 // Config vars
 // Kalidi logo brand color: #FD461E
 $primary-red: #FF1177
+$dark-blue: rgb(14, 36, 57)
 $secondary-blue: rgb(0, 173, 237)
+$yellow: rgb(252, 230, 17)
 $kaldi-red-invert: #fff
 
 $primary: $primary-red
 $primary-invert: $kaldi-red-invert
 $secondary: $secondary-blue
+$dark: $dark-blue
+$tertiary: $yellow
 $body-color: #333 
 
 $family-monospace: monospace
@@ -124,3 +128,10 @@ a.neon-glow
   &:hover
     color: #fff
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177
+
+.button.is-link
+  background: linear-gradient(-45deg,$primary, $tertiary)
+  color: black
+  &:hover
+    background: $tertiary
+    color: black
