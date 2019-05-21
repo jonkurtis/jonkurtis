@@ -3,10 +3,10 @@
 
 // Config vars
 // Kalidi logo brand color: #FD461E
-$kaldi-red: #D64000
+$primary-red: #FF1177
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
+$primary: $primary-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333 
 
@@ -106,4 +106,12 @@ a.neon-glow
 
   &:hover
     text-shadow: none
-    color: #FF1177
+    color: $primary-red
+
+.neon-glow-onHover
+  text-shadow: none
+  color: $primary-red
+
+  &:hover
+    color: #fff
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177
