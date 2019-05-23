@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Tech Stack for JonKurtis.com
+title: Tech Stack For My Website
 date: 2019-05-23T00:38:13.795Z
 image: /img/android-chrome-512x512.png
 description: This is my first post on my new blog.
