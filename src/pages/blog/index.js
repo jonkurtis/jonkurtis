@@ -17,48 +17,52 @@ export default class BlogPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Blog Posts</h1>
             </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ 
-                    maxWidth: '400px',
-                    background: 'white',
-                    boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px`,
-                    borderRadius: '10px',
-                    margin: 'auto'
-                  }}
-                  key={post.id}
-                >
-                <Link to={post.fields.slug}>
-                  <PreviewCompatibleImage imageInfo={post.frontmatter.image} />
-                </Link>
+            <div className="container" style={{
+              display: 'flex'
+            }}>
+              {posts
+                .map(({ node: post }) => (
                   <div
-                    style={{padding: '2em 2em',}}
+                    className="content"
+                    style={{ 
+                      width: '400px',
+                      background: 'white',
+                      boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px`,
+                      borderRadius: '10px',
+                      margin: 'auto'
+                    }}
+                    key={post.id}
                   >
-                    <p>
-                      <Link className="has-text-primary" to={post.fields.slug}>
-                        {post.frontmatter.title}
-                      </Link>
-                      <p style={{fontFamily: 'monospace'}} >
-                        <small>{post.frontmatter.date}</small>
+                  <Link to={post.fields.slug}>
+                    <PreviewCompatibleImage imageInfo={post.frontmatter.image} className="blog-preview-image" />
+                  </Link>
+                    <div
+                      style={{padding: '2em 2em',}}
+                    >
+                      <p>
+                        <Link className="has-text-primary" to={post.fields.slug}>
+                          {post.frontmatter.title}
+                        </Link>
+                        <p style={{fontFamily: 'monospace'}} >
+                          <small>{post.frontmatter.date}</small>
+                        </p>
+                        <ul className="taglist">
+                          {post.frontmatter.tags.map(tag => (
+                            <li key={tag + `tag`}>
+                              <Link className="button is-small" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                            </li>
+                          ))}
+                        </ul>
                       </p>
-                      <ul className="taglist">
-                        {post.frontmatter.tags.map(tag => (
-                          <li key={tag + `tag`}>
-                            <Link className="button is-small" to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </p>
-                    <p>
-                      <Link className="button is-link" to={post.fields.slug}>
-                        Read Post →
-                      </Link>
-                    </p>
+                      <p>
+                        <Link className="button is-link" to={post.fields.slug}>
+                          Read Post →
+                        </Link>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </section>
       </Layout>

@@ -31,12 +31,12 @@ export default class IndexPage extends React.Component {
                     background: 'white',
                     boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px`,
                     borderRadius: '10px',
-                    margin: 'auto'
+                    margin: '2rem auto'
                   }}
                   key={post.id}
                 >
                 <Link to={post.fields.slug}>
-                  <PreviewCompatibleImage imageInfo={post.frontmatter.image} />
+                  <PreviewCompatibleImage imageInfo={post.frontmatter.image} className="blog-preview-image"/>
                 </Link>
                   <div
                     style={{padding: '2em 2em',}}
