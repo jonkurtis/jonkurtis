@@ -19,12 +19,15 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h2 className="has-text-weight-bold is-size-2">Blog Posts</h2>
             </div>
+            <div className="container" style={{
+              display: 'flex'
+            }}>
             {posts
               .map(({ node: post }) => (
                 <div
                   className="content"
                   style={{ 
-                    maxWidth: '400px',
+                    width: '400px',
                     background: 'white',
                     boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px`,
                     borderRadius: '10px',
@@ -61,6 +64,7 @@ export default class IndexPage extends React.Component {
                   </div>
                 </div>
               ))}
+            </div>
           </div>
         </section>
       </Layout>
