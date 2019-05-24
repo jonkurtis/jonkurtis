@@ -25,8 +25,6 @@ const Hero = () => {
       }
   `)
 
-  console.log(JSON.stringify(data.markdownRemark.frontmatter.image))
-
   return (
     <div className="hero-container" style={{
       background: '#2d3047',
