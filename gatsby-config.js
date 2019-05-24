@@ -11,16 +11,6 @@ module.exports = {
         trackingId: "UA-43096313-5",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**",],
-        // Enables Google Optimize using your container Id
-        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        // Enables Google Optimize Experiment ID
-        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-        // Set Variation ID. 0 for original 1,2,3....
-        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
-        // Any additional create only fields (optional)
-        cookieDomain: "jonkurtis.com",
       },
     },
     'gatsby-plugin-sass',
