@@ -36,6 +36,8 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
+          <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton"/>
         </Helmet>
         <Navbar />
         <div>{children}</div>
