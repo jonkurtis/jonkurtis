@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: My Tech Stack
+title: "My \U0001F525 Fast Tech Stack"
 date: 2019-05-23T00:41:12.100Z
-slug: my-tech-stack
+slug: my-blazing-fast-tech-stack
 image: /img/android-chrome-512x512.png
 description: >-
   Welcome to the first post on my blog. I thought I would start off by talking
