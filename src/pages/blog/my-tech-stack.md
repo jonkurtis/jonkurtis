@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: My Tech Stack
+title: "My \U0001F525 Tech Stack"
 date: 2019-05-23T00:41:12.100Z
 slug: my-tech-stack
 image: /img/android-chrome-512x512.png
