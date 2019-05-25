@@ -35,14 +35,14 @@ export default class IndexPage extends React.Component {
                   }}
                   key={post.id}
                 >
-                <Link to={post.frontmatter.slug}>
+                <Link to={post.fields.slug}>
                   <PreviewCompatibleImage imageInfo={post.frontmatter.image} className="blog-preview-image"/>
                 </Link>
                   <div
                     style={{padding: '2em 2em',}}
                   >
                     <p>
-                      <Link className="has-text-primary" to={post.frontmatter.slug}>
+                      <Link className="has-text-primary" to={post.fields.slug}>
                         {post.frontmatter.title}
                       </Link>
                       <p style={{fontFamily: 'monospace'}} >
@@ -57,7 +57,7 @@ export default class IndexPage extends React.Component {
                       </ul>
                     </p>
                     <p>
-                      <Link className="button is-link" to={post.frontmatter.slug}>
+                      <Link className="button is-link" to={post.fields.slug}>
                         Read Post →
                       </Link>
                     </p>
@@ -96,7 +96,6 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
-            slug
             image {
               childImageSharp {
                 fluid(maxWidth: 400, quality: 100) {
