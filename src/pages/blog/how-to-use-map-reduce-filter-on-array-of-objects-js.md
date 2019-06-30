@@ -10,10 +10,12 @@ description: >-
   with useful examples.
 tags:
   - JavaScript
-  - ''
+  - Tutorials
+  - Array Methods
 ---
 Modern JavaScript array methods provide a better developer experience than for loops and forEach loops. Learn to use Map, Reduce and Filter Array Methods with useful examples.
 
+We will use the following array of wands for our examples:
 ```
 let wands = [
   {
@@ -23,8 +25,4 @@ let wands = [
     wood: 'Holly',
   },
 ]
-
-wands.map(()=> {
-
-});
 ```
