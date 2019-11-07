@@ -21,23 +21,27 @@ Modern ES5 JavaScript array methods provide a better developer experience than `
 We will use the following array of objects for our examples:
 
 ```
-let wands = [
+let wizards = [
   {
-    master: 'Harry Potter',
-    core: 'Phoenix Feather',
-    length: 11,
+    name: 'Harry Potter',
+    house: 'Gryffindor',
   },
   {
-    master: 'Tom Riddle',
-    core: 'Phoenix Feather',
-    length: 13.5,
+    name: 'Tom Riddle',
+    house: 'Slytherin',
   },
   {
-    master: 'Albus Dumbledore',
-    core: 'Thestral Tail Hair',
-    length: 15,
+    name: 'Albus Dumbledore',
+    house: 'Gryffindor',
   },
-
+  {
+    name: 'Cedric Diggory',
+    house: 'Hufflepuff',
+  },
+  {
+    name: 'Cho Chang',
+    house: 'Ravenclaw',
+  },
 ]
 ```
 
@@ -46,19 +50,19 @@ let wands = [
 The `.map()` method returns a new array after looping through the initial array and performing a function on each item in the array.
 
 ```
-let masters = wands.map((wand)=> {
-  return wand.master;
+let Gryffindors = wizards.map((wizard)=> {
+  return wizard.house;
 });
 
-console.log(masters)
-//result: ['Harry Potter', 'Tom Riddle', 'Albus Dumbledore']
+console.log(Gryffindors)
+//result: ['Harry Potter', 'Albus Dumbledore']
 ```
 
 ## How To Use The Reduce Method
 
 
 ```
-wands.reduce((wand)=> {
+wizards.reduce((wizard)=> {
 
 });
 ```
@@ -66,11 +70,11 @@ wands.reduce((wand)=> {
 ## How To Use The Filter Method
 
 ```
-let filterdWands = wands.filter((wand)=> {
+let filterdWizards = wands.filter((wand)=> {
   wand.core === 'Phoenix Core';
 });
 
-console.log(filteredWands);
+console.log(filteredWizards);
 
 ```
 
