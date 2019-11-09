@@ -16,31 +16,35 @@ tags:
 ---
 Modern ES5 JavaScript array methods provide a better developer experience than `for loops` and `forEach` loops. Learn to use `.map()`, `.reduce()` and `.filter()` Array Methods with useful examples.
 
-
-
 We will use the following array of objects for our examples:
 
 ```
-let wizards = [
+let books = [
   {
-    name: 'Harry Potter',
-    house: 'Gryffindor',
+    title: 'Harry Potter and the Philosopher's Stone',
+    pages: 223,
   },
   {
-    name: 'Tom Riddle',
-    house: 'Slytherin',
+    title: 'Harry Potter and the Chamber of Secrets',
+    pages: 251,
   },
   {
-    name: 'Albus Dumbledore',
-    house: 'Gryffindor',
+    title: 'Harry Potter and the Prisoner of Azkaban',
+    pages: 317,
   },
   {
-    name: 'Cedric Diggory',
-    house: 'Hufflepuff',
+    title: 'Harry Potter and the Goblet of Fire',
+    pages: 636,
   },
   {
-    name: 'Cho Chang',
-    house: 'Ravenclaw',
+    title: 'Harry Potter and the Order of the Pheonix',
+    pages: 766,
+  },  {
+    title: 'Harry Potter and the Half Blood Prince',
+    pages: 607,
+  },  {
+    title: 'Harry Potter and the Deathly Hallows',
+    pages: 607,
   },
 ]
 ```
@@ -60,7 +64,6 @@ console.log(houses)
 
 ## How To Use The Reduce Method
 
-
 ```
 wizards.reduce((wizard)=> {
 
@@ -77,7 +80,6 @@ let filterdWizards = wizards.filter((wizard)=> {
 console.log(filteredWizards);
 
 //result: [{name: 'Tom Riddle', house: 'Slytherin'}]
-
 ```
 
 ## Conclusion
