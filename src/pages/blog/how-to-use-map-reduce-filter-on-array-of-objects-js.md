@@ -50,12 +50,12 @@ let wizards = [
 The `.map()` method returns a new array after looping through the initial array and performing a function on each item in the array.
 
 ```
-let Gryffindors = wizards.map((wizard)=> {
+let houses = wizards.map((wizard)=> {
   return wizard.house;
 });
 
-console.log(Gryffindors)
-//result: ['Harry Potter', 'Albus Dumbledore']
+console.log(houses)
+//result: ['Gryffindor', Slytherin', 'Gryffindor', 'Hufflepuff', 'Ravenclaw']
 ```
 
 ## How To Use The Reduce Method
@@ -70,11 +70,13 @@ wizards.reduce((wizard)=> {
 ## How To Use The Filter Method
 
 ```
-let filterdWizards = wands.filter((wand)=> {
-  wand.core === 'Phoenix Core';
+let filterdWizards = wizards.filter((wizard)=> {
+  wizard.house === 'Slytherin';
 });
 
 console.log(filteredWizards);
+
+//result: [{name: 'Tom Riddle', house: 'Slytherin'}]
 
 ```
 
