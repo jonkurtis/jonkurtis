@@ -27,3 +27,7 @@ Build the best Budget NAS Server with:
 * Comparable Read/Write Speeds to Off-The-Shelf NAS devices.
 * Effectively run a Plex/Emby/Jellyfin media Server.
 * Bonus: Enough extra bandwidth to run other small docker container projects. i.e. Wiki, CMS, Pi Hole, etc.
+
+
+
+Cover Photo by Jakob Owens on Unsplash
