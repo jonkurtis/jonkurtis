@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: The Best Budget NAS Server In 2020
+title: My Journey To The Best Budget NAS Server In 2020
 date: 2020-02-28T02:07:03.727Z
 slug: the-best-budget-nas-server-2020
 image: /img/jakob-owens-nimlssnl-nu-unsplash.jpg
