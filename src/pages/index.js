@@ -20,13 +20,14 @@ export default class IndexPage extends React.Component {
               <h2 className="has-text-weight-bold is-size-2">Blog Posts</h2>
             </div>
             <div className="container" style={{
-              display: 'flex'
-            }}>
+              display: 'flex',
+              flex- wrap: 'wrap'
+          }}>
             {posts
               .map(({ node: post }) => (
                 <div
                   className="content"
-                  style={{ 
+                  style={{
                     width: '400px',
                     background: 'white',
                     boxShadow: `rgba(0, 0, 0, 0.1) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px`,
@@ -35,17 +36,17 @@ export default class IndexPage extends React.Component {
                   }}
                   key={post.id}
                 >
-                <Link to={post.fields.slug}>
-                  <PreviewCompatibleImage imageInfo={post.frontmatter.image} className="blog-preview-image"/>
-                </Link>
+                  <Link to={post.fields.slug}>
+                    <PreviewCompatibleImage imageInfo={post.frontmatter.image} className="blog-preview-image" />
+                  </Link>
                   <div
-                    style={{padding: '2em 2em',}}
+                    style={{ padding: '2em 2em', }}
                   >
                     <p>
                       <Link className="has-text-primary" to={post.fields.slug}>
                         {post.frontmatter.title}
                       </Link>
-                      <p style={{fontFamily: 'monospace'}} >
+                      <p style={{ fontFamily: 'monospace' }} >
                         <small>{post.frontmatter.date}</small>
                       </p>
                       <ul className="taglist">
@@ -64,10 +65,10 @@ export default class IndexPage extends React.Component {
                   </div>
                 </div>
               ))}
-            </div>
+          </div>
           </div>
         </section>
-      </Layout>
+      </Layout >
     )
   }
 }
