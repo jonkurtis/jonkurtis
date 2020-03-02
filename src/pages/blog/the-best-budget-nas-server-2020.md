@@ -14,7 +14,6 @@ tags:
   - nas
   - plex
   - docker
-  - hard drives
 ---
 I have a problem It is the year 2020 and my media library is currently reaching the limits of the 1TB external hard drive that is shackled in isolation to the home theater PC in my living room. I decided the time was ripe to get a Network Attached Storage device, commonly referred to as a NAS, so I could set my media free. Off The Shelf NAS devices are quite the sticker shock from the likes of Synology and Q-NAP and the used market is not very plentiful. So I set out on the quest to 
 
