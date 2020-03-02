@@ -21,17 +21,19 @@ While the Dell T110 II typically sells for $120 - $150 on eBay (in March of 2020
 
 ## Dell T110 II NAS Server Specs:
 
-* 6 Hard Drive Bays
-* Intel E3-1220 V2 CPU: 22nm 4 cores / 4 threads @ 3.1 GHz (Better than any off the shelf NAS)
+* 6 Hard Drive Bays (4 x 3.5"+ 2 x 5.25") 
+* Intel Xeon E3-1220 V2 CPU 22nm 4 cores / 4 threads @ 3.1 GHz (Better than any off the shelf NAS)
 * Intel LGA1155 chipset (Cheap CPU upgrade via ebay to 4 cores / 8 threads i.e. E3-1230 V2 @ 3.3 GHz )
 * 16 GB DDR3 ECC RAM (Upgradeable to 32GB)
-* Dell Perc H200 RAID Card (For Hard Drive Expansion)
+* Dell Perc H200 RAID Card (For Hard Drive Expansion + Cheap SAS Hard Drive Compatability)
+* Low Power Consumption (25 - 30 Watts idle without drives) \[WIFE APPROVED]
+* Quiet \[WIFE APPROVED]
 
 My NAS search began when my media library reached the limits of the 1TB external hard drive that was shackled in isolation to the home theater PC in my living room. I recieved quite the sticker shock when I started search Amazon for Off-The-Shelf NAS devices like Synology and Q-NAP. So I set out on the quest to find alternatives.
 
 ## What Does A Budget NAS Need to Have?
 
-* 6 Hard Drive Bays (Minimum)
+* 4 Hard Drive Bays (Minimum)
 * \[Relatively] low power consumption
 * Comparable Read/Write Speeds to Off-The-Shelf NAS devices
 * Effectively run a Plex media server (or Emby/Jellyfin)
