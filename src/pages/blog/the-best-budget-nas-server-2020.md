@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'My Journey To The Best Budget DIY NAS Server [In 2020]'
+title: 'The Best Budget DIY NAS Server [In 2020]'
 date: 2020-02-28T02:07:03.727Z
 slug: the-best-budget-diy-nas-server-2020
 image: /img/jakob-owens-nimlssnl-nu-unsplash.jpg
@@ -29,7 +29,7 @@ While the Dell T110 II typically sells for $120 - $150 on eBay (in March of 2020
 * Low Power Consumption (25 - 30 Watts idle without drives) \[WIFE APPROVED]
 * Quiet \[WIFE APPROVED]
 
-My NAS search began when my media library reached the limits of the 1TB external hard drive that was shackled in isolation to the home theater PC in my living room. I recieved quite the sticker shock when I started search Amazon for Off-The-Shelf NAS devices like Synology and Q-NAP. So I set out on the quest to find alternatives.
+My NAS search began when my media library reached the limits of the 1TB external hard drive that was shackled in isolation to the home theater PC in my living room. I recieved quite the sticker shock when I started to search Amazon for Off-The-Shelf NAS devices like Synology and Q-NAP. So I set out on the quest to find alternatives.
 
 ## What Does A Budget NAS Need to Have?
 
