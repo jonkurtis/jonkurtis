@@ -19,7 +19,7 @@ const TemplateWrapper = ({ children }) => (
         }
     `}
     render={data => (
-      <div>
+      <>
         <Helmet>
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
@@ -40,9 +40,9 @@ const TemplateWrapper = ({ children }) => (
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton" />
         </Helmet>
         <Navbar />
-        <div>{children}</div>
+        <main>{children}</main>
         <Footer />
-      </div>
+      </>
     )}
   />
 )
