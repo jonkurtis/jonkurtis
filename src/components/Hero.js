@@ -47,7 +47,7 @@ const Hero = () => {
         <h1 style={{
           fontSize: '2rem'
         }}
-        >Hi, I'm <Link to="/about" className="neon-glow-onHover">Jon Kurtis</Link>. I am a frontend web developer and I make lightning fast web experiences on the JAMstack.</h1>
+        >Hi, I'm <Link to="/about" className="neon-glow-onHover">Jon Kurtis</Link>. I am a fullstack web developer and I make lightning fast web experiences on the JAMstack.</h1>
       </div>
       <div className="hero-image-container" style={{
         margin: '2rem 2rem 0 2rem',
