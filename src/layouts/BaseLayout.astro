@@ -1,0 +1,25 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+}
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title, description } = Astro.props; 
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class='flex flex-col w-full min-h-screen'>
+		<Header title={title} />
+		<main class='flex-1 prose'>
+            <slot />
+		</main>
+		<Footer />
+	</body>
+</html>
